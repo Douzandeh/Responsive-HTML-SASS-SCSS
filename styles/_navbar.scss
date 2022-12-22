@@ -23,20 +23,20 @@
     @extend %align-center;
   }
 
-  &__bars{
+  &__bars {
     opacity: 0;
 
-    @include tablet{
-        color: $dark;
-        opacity: 1;
-        position: absolute;
-        top: 22px;
-        right: 20px;
-        font-size: 2rem;
+    @include tablet {
+      color: $dark;
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      font-size: 2rem;
     }
   }
 
-  &__menu{
+  &__menu {
     @extend %align-center;
     list-style: none;
     text-align: center;
@@ -45,15 +45,29 @@
     @include tablet {
       display: none;
     }
-    &--links{
+    &--links {
       color: $dark;
       @extend %align-center;
       justify-content: center;
       text-decoration: none;
       padding: 0 1rem;
 
-      &:hover{
+      &:hover {
         color: $lime;
+        transition: all 0.3s ease;
+      }
+    }
+
+    #button {
+      padding: 12px 24px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      background: $lime;
+      margin-left: 16px;
+      color: $light;
+      &:hover{
+        background: $orangeRed;
         transition: all 0.3s ease;
       }
     }
