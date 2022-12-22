@@ -1,5 +1,5 @@
 @import "color";
-
+@import "media-queries";
 %align-center {
   display: flex;
   align-items: center;
@@ -25,5 +25,37 @@
 
   &__bars{
     opacity: 0;
+
+    @include tablet{
+        color: $dark;
+        opacity: 1;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        font-size: 2rem;
+    }
+  }
+
+  &__menu{
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    margin-right: 14px;
+
+    @include tablet {
+      display: none;
+    }
+    &--links{
+      color: $dark;
+      @extend %align-center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0 1rem;
+
+      &:hover{
+        color: $lime;
+        transition: all 0.3s ease;
+      }
+    }
   }
 }
